@@ -1,0 +1,1029 @@
+<!DOCTYPE html><html><head>
+      <title>SiC_Power_Semiconductor_Research_Report</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\zyfan\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.27\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-details{margin:0;padding:0;border:none}.markdown-preview .md-toc summary.md-toc-link-wrapper{cursor:pointer;list-style-position:outside}.markdown-preview .md-toc summary.md-toc-link-wrapper::marker{font-size:.85em}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='0']{margin-left:12px}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='1']{margin-left:28px}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='2']{margin-left:44px}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='3']{margin-left:60px}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='4']{margin-left:76px}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='5']{margin-left:80px}.markdown-preview a.tag,.markdown-preview a.tag:active,.markdown-preview a.tag:link,.markdown-preview a.tag:visited,.markdown-preview span.tag:not(.token){display:inline-block;background-color:var(--vscode-badge-background,rgba(127,127,127,.18));color:var(--vscode-badge-foreground,currentColor);border-radius:2em;font-size:.85em;font-weight:500;padding:.05em .55em;line-height:1.5;white-space:nowrap;text-decoration:none;text-shadow:none;box-shadow:none;transition:background-color .12s ease,opacity .12s ease}.markdown-preview a.tag{cursor:pointer}.markdown-preview a.tag:focus,.markdown-preview a.tag:hover{background-color:var(--vscode-badge-background,rgba(127,127,127,.32));color:var(--vscode-badge-foreground,currentColor);opacity:.85;text-decoration:none;outline:0}.markdown-preview .wikilink-embed-content{border-left:3px solid var(--vscode-textBlockQuote-border,rgba(128,128,128,.3));background:var(--vscode-textBlockQuote-background,rgba(128,128,128,.05));margin:.5em 0;padding:.5em .75em;border-radius:0 3px 3px 0}.markdown-preview .wikilink-embed-content.wikilink-embed-error{border-left-color:var(--vscode-errorForeground,#cf222e);color:var(--vscode-errorForeground,#cf222e);font-style:italic;opacity:.8}.markdown-preview .wikilink-embed-content h1:first-child,.markdown-preview .wikilink-embed-content h2:first-child,.markdown-preview .wikilink-embed-content h3:first-child,.markdown-preview .wikilink-embed-content h4:first-child,.markdown-preview .wikilink-embed-content h5:first-child,.markdown-preview .wikilink-embed-content h6:first-child{margin-top:.25em}.markdown-preview .wikilink-embed-content .wikilink-embed-content{margin:.25em 0;padding:.25em .5em}.markdown-preview .block-id{display:none}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-details{margin:0;padding:0;border:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='0']{padding-left:0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='1']{padding-left:16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='2']{padding-left:32px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='3']{padding-left:48px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='4']{padding-left:64px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='5']{padding-left:80px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script>
+    </head>
+    <body for="html-export">
+      <div class="crossnote markdown-preview  ">
+      
+<h1 id="sic功率半导体厂商最新财报梳理与ai数据中心方向深度跟踪">SiC功率半导体厂商最新财报梳理与AI数据中心方向深度跟踪 </h1>
+<h2 id="英飞凌--意法半导体--安森美--2025q4-2026q1业绩会核心要点">英飞凌 / 意法半导体 / 安森美 | 2025Q4-2026Q1业绩会核心要点 </h2>
+<blockquote>
+<p>报告日期：2026年6月2日<br>
+覆盖标的：Infineon (IFX/IFNNY)、STMicroelectronics (STM)、ON Semiconductor (ON)<br>
+研究方向：AI数据中心电力基础设施、SiC/GaN功率器件、新能源汽车电驱</p>
+</blockquote>
+<hr>
+<h2 id="一-三家厂商最新财报一览">一、三家厂商最新财报一览 </h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">指标</th>
+<th style="text-align:left">英飞凌 Infineon</th>
+<th style="text-align:left">意法半导体 STM</th>
+<th style="text-align:left">安森美 onsemi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>最新季度</strong></td>
+<td style="text-align:left">FY2026 Q2 (截至2026/3/31)</td>
+<td style="text-align:left">Q1 2026 (截至2026/3/28)</td>
+<td style="text-align:left">Q1 2026 (截至2026/4/4)</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>营收</strong></td>
+<td style="text-align:left">€38.12亿 环比+4% 同比+6%</td>
+<td style="text-align:left">$31.0亿 同比+23%</td>
+<td style="text-align:left">$15.13亿 同比+5%</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>毛利率</strong></td>
+<td style="text-align:left">调整后43.0%</td>
+<td style="text-align:left">Non-GAAP 34.1%</td>
+<td style="text-align:left">GAAP/Non-GAAP 38.5%（+32bps QoQ，连续三季扩张）</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>运营利润率</strong></td>
+<td style="text-align:left">部门利润率17.1%</td>
+<td style="text-align:left">Non-GAAP 5.5%</td>
+<td style="text-align:left">Non-GAAP 19.1%</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>净利润/EPS</strong></td>
+<td style="text-align:left">每股€0.35(调整后)</td>
+<td style="text-align:left">Non-GAAP $0.13/股</td>
+<td style="text-align:left">Non-GAAP $0.64/股</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>订单积压</strong></td>
+<td style="text-align:left">~€250亿 同比+25%</td>
+<td style="text-align:left">Book-to-Bill &gt;1 全市场</td>
+<td style="text-align:left">订单趋势改善</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>库存天数</strong></td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">140天 (同比-27天)</td>
+<td style="text-align:left">-</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>下季指引</strong></td>
+<td style="text-align:left">Q3营收约€41亿 部门利润率high-teens%</td>
+<td style="text-align:left">Q2营收$34.5亿 毛利率35.2%</td>
+<td style="text-align:left">Q2营收$15.35-16.35亿 毛利率38.0-40.0%</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="一续-长期财务目标与业绩指引对比">一（续）、长期财务目标与业绩指引对比 </h2>
+<h3 id="1-英飞凌-infineon--周期穿越型目标through-the-cycle">1. 英飞凌 Infineon — 周期穿越型目标（Through the Cycle） </h3>
+<blockquote>
+<p>来源：Annual Report 2025 / Target Operating Model</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">指标</th>
+<th style="text-align:left">目标</th>
+<th style="text-align:left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>营收增长</strong></td>
+<td style="text-align:left"><strong>&gt;10% CAGR</strong>（跨越周期平均）</td>
+<td style="text-align:left">FY25: €147亿 → FY26: &gt;€160亿</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>部门利润率</strong></td>
+<td style="text-align:left"><strong>25%</strong></td>
+<td style="text-align:left">FY26目标~20%（上调自high-teens）</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>调整后自由现金流利润率</strong></td>
+<td style="text-align:left"><strong>10-15%</strong></td>
+<td style="text-align:left">FY26调整后~€16.5亿</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>资本开支</strong></td>
+<td style="text-align:left">~€22亿/年（常态）；FY26 €27亿（加速AI产能）</td>
+<td style="text-align:left">含€5亿加速投资AI数据中心</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>AI数据中心</strong></td>
+<td style="text-align:left">FY26: €15亿 → FY27: €25亿 → <strong>2030: €80-120亿TAM</strong></td>
+<td style="text-align:left">每千瓦$175内容价值</td>
+</tr>
+</tbody>
+</table>
+<p><strong>关键里程碑</strong></p>
+<ul>
+<li>德累斯顿Smart Power Fab：2026年7月2日启用</li>
+<li>马来西亚居林Module 3：SiC 8英寸量产爬坡</li>
+<li>组织架构：2026年7月1日从4部门→3部门（ATV/PS/ES）</li>
+</ul>
+<hr>
+<h3 id="2-意法半导体-stm--两阶段目标2027-2028--2030">2. 意法半导体 STM — 两阶段目标（2027-2028 → 2030） </h3>
+<blockquote>
+<p>来源：Capital Markets Day 2024（2024年11月20日，巴黎）</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">指标</th>
+<th style="text-align:left">2027-2028中期目标</th>
+<th style="text-align:left">2030年野心</th>
+<th style="text-align:left">当前位置（Q1 2026）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>营收</strong></td>
+<td style="text-align:left"><strong>~$180亿</strong></td>
+<td style="text-align:left"><strong>$200亿+</strong></td>
+<td style="text-align:left"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>31</mn><mtext>亿</mtext><mi mathvariant="normal">/</mi><mtext>季</mtext><mo>→</mo><mtext>全年约</mtext></mrow><annotation encoding="application/x-tex">31亿/季 → 全年约</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">31</span><span class="mord cjk_fallback">亿</span><span class="mord">/</span><span class="mord cjk_fallback">季</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord cjk_fallback">全年约</span></span></span></span>120-130亿</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>毛利率</strong></td>
+<td style="text-align:left"><strong>44-46%</strong></td>
+<td style="text-align:left"><strong>~50%</strong></td>
+<td style="text-align:left">34.1%（Non-GAAP）</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>运营利润率</strong></td>
+<td style="text-align:left"><strong>22-24%</strong></td>
+<td style="text-align:left"><strong>&gt;30%</strong></td>
+<td style="text-align:left">5.5%（Non-GAAP）</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>自由现金流利润率</strong></td>
+<td style="text-align:left"><strong>~20%</strong></td>
+<td style="text-align:left"><strong>&gt;25%</strong></td>
+<td style="text-align:left">负（含NXP收购）</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>成本节约</strong></td>
+<td style="text-align:left">2027年底退出高个位数亿美元/年</td>
+<td style="text-align:left">—</td>
+<td style="text-align:left">制造重塑+裁员5%进行中</td>
+</tr>
+</tbody>
+</table>
+<p><strong>实现路径</strong></p>
+<ul>
+<li>制造重塑计划：关闭法国150mm旧产线，Agrate/Crolles转向SiC/RF</li>
+<li>AI数据中心：2026 &gt;<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>5</mn><mtext>亿</mtext><mo>→</mo><mn>2027</mn><mo>&gt;</mo></mrow><annotation encoding="application/x-tex">5亿 → 2027 &gt;</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">5</span><span class="mord cjk_fallback">亿</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6835em;vertical-align:-0.0391em;"></span><span class="mord">2027</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span></span></span></span>10亿 → 2030为重要增长极</li>
+<li>LEO卫星：2026-2028累计&gt;$30亿</li>
+<li>毛利率40%里程碑：季度营收达€40亿时</li>
+</ul>
+<hr>
+<h3 id="3-安森美-onsemi--长期财务模型long-term-target">3. 安森美 onsemi — 长期财务模型（Long-Term Target） </h3>
+<blockquote>
+<p>来源：Q1 2026 Investor Presentation（官方披露）</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">指标</th>
+<th style="text-align:left">2025实际</th>
+<th style="text-align:left">长期目标</th>
+<th style="text-align:left">隐含CAGR</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>营收</strong></td>
+<td style="text-align:left">$60亿</td>
+<td style="text-align:left"><strong>10-12% CAGR</strong></td>
+<td style="text-align:left">~$100亿+ by 2029-2030</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>毛利率</strong></td>
+<td style="text-align:left">38.4%</td>
+<td style="text-align:left"><strong>53%</strong></td>
+<td style="text-align:left">提升1450bps</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>运营利润率</strong></td>
+<td style="text-align:left">18.6%</td>
+<td style="text-align:left"><strong>40%</strong></td>
+<td style="text-align:left">提升2140bps</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>运营费用率</strong></td>
+<td style="text-align:left">19.8%</td>
+<td style="text-align:left"><strong>13%</strong></td>
+<td style="text-align:left">优化680bps</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>资本开支/营收</strong></td>
+<td style="text-align:left">5.7%</td>
+<td style="text-align:left"><strong>中个位数%</strong></td>
+<td style="text-align:left">维持纪律</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>自由现金流利润率</strong></td>
+<td style="text-align:left">23.7%</td>
+<td style="text-align:left"><strong>25-30%</strong></td>
+<td style="text-align:left">稳态提升</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>股票回购</strong></td>
+<td style="text-align:left">返还160% FCF</td>
+<td style="text-align:left"><strong>返还100% FCF</strong></td>
+<td style="text-align:left">$60亿授权</td>
+</tr>
+</tbody>
+</table>
+<p><strong>$640亿TAM by 2029 拆解</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">终端市场</th>
+<th style="text-align:left">TAM</th>
+<th style="text-align:left">CAGR</th>
+<th style="text-align:left">安森美定位</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">电动汽车</td>
+<td style="text-align:left">$263亿</td>
+<td style="text-align:left">13%</td>
+<td style="text-align:left">EliteSiC 900V平台，SiC份额~55%</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>AI数据中心</strong></td>
+<td style="text-align:left"><strong>$122亿</strong></td>
+<td style="text-align:left"><strong>40%</strong></td>
+<td style="text-align:left"><strong>PowerTree功率器件，每机架<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>15</mn><mi>K</mi><mo>→</mo></mrow><annotation encoding="application/x-tex">15K→</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">15</span><span class="mord mathnormal" style="margin-right:0.0715em;">K</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span></span></span></span>115K</strong></td>
+</tr>
+<tr>
+<td style="text-align:left">工厂自动化</td>
+<td style="text-align:left">$113亿</td>
+<td style="text-align:left">7%</td>
+<td style="text-align:left">Treo平台，人形机器人传感</td>
+</tr>
+<tr>
+<td style="text-align:left">能源基础设施</td>
+<td style="text-align:left">$96亿</td>
+<td style="text-align:left">19%</td>
+<td style="text-align:left">SST固态变压器、储能、微电网</td>
+</tr>
+<tr>
+<td style="text-align:left">先进安全</td>
+<td style="text-align:left">$37亿</td>
+<td style="text-align:left">11%</td>
+<td style="text-align:left">图像传感器、ADAS</td>
+</tr>
+<tr>
+<td style="text-align:left">EV充电</td>
+<td style="text-align:left">$7亿</td>
+<td style="text-align:left">14%</td>
+<td style="text-align:left">快充功率器件</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="三家长期目标速览">三家长期目标速览 </h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">维度</th>
+<th style="text-align:left">英飞凌 Infineon</th>
+<th style="text-align:left">意法半导体 STM</th>
+<th style="text-align:left">安森美 onsemi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>长期营收CAGR</strong></td>
+<td style="text-align:left">&gt;10%（跨越周期）</td>
+<td style="text-align:left">~<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>180</mn><mtext>亿</mtext><mo stretchy="false">(</mo><mn>2027</mn><mo>−</mo><mn>28</mn><mo stretchy="false">)</mo><mo>→</mo></mrow><annotation encoding="application/x-tex">180亿(2027-28) →</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">180</span><span class="mord cjk_fallback">亿</span><span class="mopen">(</span><span class="mord">2027</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">28</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span></span></span></span>200亿+(2030)</td>
+<td style="text-align:left">10-12%</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>长期利润率目标</strong></td>
+<td style="text-align:left">部门利润率25%</td>
+<td style="text-align:left">运营利润率22-24%(2027-28) → &gt;30%(2030)</td>
+<td style="text-align:left">运营利润率40%，毛利率53%</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>长期FCF目标</strong></td>
+<td style="text-align:left">调整后FCF利润率10-15%</td>
+<td style="text-align:left">~20%(2027-28) → &gt;25%(2030)</td>
+<td style="text-align:left">25-30%</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>AI相关指引</strong></td>
+<td style="text-align:left">FY26 €15亿 → FY27 €25亿（纯AI电源方案，+67%）</td>
+<td style="text-align:left">2026 &gt;<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>5</mn><mtext>亿</mtext><mo>→</mo><mn>2027</mn><mo>&gt;</mo></mrow><annotation encoding="application/x-tex">5亿 → 2027 &gt;</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">5</span><span class="mord cjk_fallback">亿</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6835em;vertical-align:-0.0391em;"></span><span class="mord">2027</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span></span></span></span>10亿（数据中心总收入，其中~40%为模拟/功率）</td>
+<td style="text-align:left">2026全年预计翻倍（无FY2027具体数字指引）→ 2029 TAM $122亿</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>关键产能节点</strong></td>
+<td style="text-align:left">德累斯顿Fab 7月启用；居林SiC爬坡</td>
+<td style="text-align:left">Agrate 300mm旗舰；卡塔尼亚SiC园区</td>
+<td style="text-align:left">East Fishkill；捷克SiC设施（欧盟$5.3亿援助）</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="二-各公司详细拆解">二、各公司详细拆解 </h2>
+<h3 id="21-英飞凌-infineon-ifx--全球功率半导体龙头">2.1 英飞凌 Infineon (IFX) — 全球功率半导体龙头 </h3>
+<h4 id="最新业绩fy2026-q2截至2026年3月">最新业绩（FY2026 Q2，截至2026年3月） </h4>
+<ul>
+<li><strong>营收€38.12亿</strong>，环比+4%，同比+6%（汇率调整后+14%+），完全符合指引</li>
+<li><strong>调整后毛利率43.0%</strong>，环比提升（上季40.7%）</li>
+<li><strong>部门利润€6.53亿</strong>，部门利润率17.1%（上季17.9%），季节性价格调整+汽车高压业务重组拖累</li>
+<li><strong>订单积压约€250亿</strong>，环比增€40亿，同比+25%，当前 quarter 仍在增长</li>
+<li><strong>自由现金流</strong>为负€6300万（Q1为负€1.99亿），季度改善</li>
+</ul>
+<h4 id="分部表现">分部表现 </h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">部门</th>
+<th style="text-align:left">营收</th>
+<th style="text-align:left">环比</th>
+<th style="text-align:left">同比</th>
+<th style="text-align:left">核心动态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>ATV (汽车)</strong></td>
+<td style="text-align:left">€18.30亿</td>
+<td style="text-align:left">+1%</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">汽车MCU市场份额从32%→36%，高压电驱业务面临市场压力</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>GIP (绿色工业电源)</strong></td>
+<td style="text-align:left">€4.48亿</td>
+<td style="text-align:left">+15%</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">能源基础设施、HVAC、家电驱动增长，固态变压器初步收入</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>PSS (电源与传感系统)</strong></td>
+<td style="text-align:left">€12.60亿</td>
+<td style="text-align:left">+8%</td>
+<td style="text-align:left">+26%</td>
+<td style="text-align:left">AI数据中心电源是核心驱动力，<strong>当前处于产能分配(Allocation)状态</strong>；部门利润率<strong>20.4%</strong>（环比大幅扩张）</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>CSS (联网安全系统)</strong></td>
+<td style="text-align:left">€3.19亿</td>
+<td style="text-align:left">持平</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">MCU+连接增长，政府证件下滑</td>
+</tr>
+</tbody>
+</table>
+<h4 id="ai数据中心电源--英飞凌最强增长引擎">AI数据中心电源 — 英飞凌最强增长引擎 </h4>
+<ul>
+<li><strong>FY26目标营收€15亿</strong>（官方reconfirmed，不受汇率逆风影响）</li>
+<li><strong>FY27目标营收€25亿</strong>（官方reconfirmed）</li>
+<li><strong>每千瓦装机容量半导体价值<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>100</mn><mo>−</mo><mn>250</mn><mtext>，平均约</mtext></mrow><annotation encoding="application/x-tex">100-250，平均约</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">100</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">250</span><span class="mord cjk_fallback">，平均约</span></span></span></span>175</strong>，对应2030年可寻址市场€80-120亿</li>
+<li>产品覆盖功率半导体+控制器/驱动IC环节（不覆盖电容、电感、散热等无源器件）：高压转换、智能功率级、保护控制</li>
+<li><strong>GaN方案已在AI数据中心放量</strong>，多个客户在多级电源转换中采用</li>
+<li><strong>SiC需求同样非常强劲</strong>，受益于AI相关应用</li>
+<li>投资€50亿的德累斯顿Smart Power Fab将于2026年夏季正式启用，重点服务AI数据中心、SDV、机器人</li>
+</ul>
+<h4 id="战略调整">战略调整 </h4>
+<ul>
+<li><strong>组织架构重构（2026年7月1日起）</strong>：从4部门→3部门
+<ul>
+<li><strong>Automotive (ATV)</strong>：SDV + 电动化</li>
+<li><strong>Power Systems (PS)</strong>：AI数据中心电源、可再生能源、电网基础设施、消费电子/通信/工业电源</li>
+<li><strong>Edge Systems (ES)</strong>：边缘AI、机器人、医疗可穿戴、工业自动化、智能家居</li>
+</ul>
+</li>
+<li>FY26投资从€22亿上调至**€27亿**，主要用于加速AI数据中心电源产能扩张</li>
+<li>汽车高压电驱业务（IGBT/SiC模块）利润率不可接受，正在重组（Warstein后端产线+前端产能重新分配至AI业务）</li>
+</ul>
+<h4 id="fy26展望官方上调">FY26展望（官方上调） </h4>
+<ul>
+<li><strong>营收</strong>：同比"显著增长"（significantly up vs. prior year）</li>
+<li><strong>调整后毛利率</strong>：low-to-mid 40s%（Q2为43.0%，全年目标区间）</li>
+<li><strong>部门利润率</strong>：~20%（Q2为17.1%，H2有望提升）</li>
+<li><strong>投资</strong>：€27亿（上调自€22亿），D&amp;A约€20亿</li>
+<li><strong>调整后自由现金流</strong>：~€16.5亿</li>
+<li><strong>Q3 FY26指引</strong>：营收约€41亿，部门利润率high-teens%</li>
+</ul>
+<h4 id="市场判断">市场判断 </h4>
+<ul>
+<li>更广泛的上升周期正在形成，AI是"异常强劲"的驱动力</li>
+<li>汽车订单在补库，但电动化进程慢于预期，高压器件价格战激烈</li>
+<li>工业市场库存降至低位，订单显著回升；电网现代化+AI数据中心扩张驱动UPS和冷却系统需求</li>
+<li>固态变压器已产生初步收入，设计赢单 pipeline 强劲</li>
+</ul>
+<hr>
+<h3 id="22-意法半导体-stmicroelectronics-stm--周期触底反弹ai成新增长点">2.2 意法半导体 STMicroelectronics (STM) — 周期触底反弹，AI成新增长点 </h3>
+<h4 id="最新业绩q1-2026截至2026年3月28日">最新业绩（Q1 2026，截至2026年3月28日） </h4>
+<ul>
+<li><strong>营收$31.0亿</strong>，环比-1%（季节性），<strong>同比+23%</strong>，高于指引中点$5000万
+<ul>
+<li>含NXP MEMS传感器业务收购贡献约$4000万</li>
+</ul>
+</li>
+<li><strong>毛利率33.8%</strong>（Non-GAAP 34.1%），同比+40bps，闲置产能费用下降+产品组合改善</li>
+<li><strong>Non-GAAP运营利润$1.71亿</strong>，运营利润率5.5%（仍处低位但转正）</li>
+<li><strong>Non-GAAP净利润$1.22亿</strong>，EPS $0.13</li>
+<li><strong>库存周转天数140天</strong>，从167天大幅改善，接近正常化</li>
+<li><strong>自由现金流-$7.23亿</strong>（含$8.95亿NXP MEMS收购现金支出）</li>
+</ul>
+<h4 id="各终端市场同比表现关键信号">各终端市场同比表现（关键信号） </h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">终端市场</th>
+<th style="text-align:left">Q1 2026同比</th>
+<th style="text-align:left">Q1 2026环比</th>
+<th style="text-align:left">评价</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">通信设备与计算机外设</td>
+<td style="text-align:left"><strong>+41%</strong></td>
+<td style="text-align:left">+3%</td>
+<td style="text-align:left">AI数据中心基础设施驱动</td>
+</tr>
+<tr>
+<td style="text-align:left">工业</td>
+<td style="text-align:left"><strong>+26%</strong></td>
+<td style="text-align:left">-1%</td>
+<td style="text-align:left">回到同比增长，机器人物联网等</td>
+</tr>
+<tr>
+<td style="text-align:left">消费电子</td>
+<td style="text-align:left"><strong>+21%</strong></td>
+<td style="text-align:left">-14%</td>
+<td style="text-align:left">季节性回落但同比强劲</td>
+</tr>
+<tr>
+<td style="text-align:left">汽车</td>
+<td style="text-align:left"><strong>+15%</strong></td>
+<td style="text-align:left">-10%</td>
+<td style="text-align:left">七季度来首次同比正增长</td>
+</tr>
+</tbody>
+</table>
+<h4 id="ai数据中心--stm的战略转身">AI数据中心 — STM的战略转身 </h4>
+<ul>
+<li><strong>2026年数据中心营收确认"nicely above $5亿"，2027年"well above $10亿"</strong></li>
+<li><strong>与AWS签署多年期、数十亿美元（multi-billion USD）商业合作协议</strong>，覆盖广泛半导体解决方案，赋能云与AI高性能计算基础设施</li>
+<li><strong>与NVIDIA合作扩展800V DC AI数据中心电源转换产品组合</strong>，新增12V和6V架构</li>
+<li><strong>硅光平台已开始大批量生产</strong>，供超大规模云厂商用于数据中心和AI集群光互连</li>
+<li>产品线覆盖：硅基+SiC+GaN功率器件、BCD智能功率工艺、隔离技术</li>
+<li>覆盖功率半导体+控制器/驱动IC环节（不覆盖电容、电感、散热等无源器件）</li>
+</ul>
+<h4 id="制造重塑与sic战略">制造重塑与SiC战略 </h4>
+<ul>
+<li>200mm SiC产能持续扩张，意大利Agrate 300mm工厂成为智能电源旗舰基地</li>
+<li>收购NXP MEMS传感器业务（$40M Q1收入，强化传感器+AI边缘能力）</li>
+<li>制造布局重塑：关闭法国150mm旧产线，裁员约5%（2800人），2027年底目标$3-4亿年度成本节约</li>
+<li>2025年Q4意大利卡塔尼亚200mm SiC园区投产</li>
+<li>与英飞凌在重庆的合资工厂预计2025年三季度量产8英寸SiC/GaN</li>
+</ul>
+<h4 id="各产品线运营利润率q1-2026non-gaap">各产品线运营利润率（Q1 2026，Non-GAAP） </h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">产品线</th>
+<th style="text-align:left">营收</th>
+<th style="text-align:left">运营利润率</th>
+<th style="text-align:left">评价</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">AM&amp;S（模拟/MEMS/传感器）</td>
+<td style="text-align:left">$13.18亿</td>
+<td style="text-align:left"><strong>12.2%</strong></td>
+<td style="text-align:left">imaging和MEMS驱动同比+23.2%</td>
+</tr>
+<tr>
+<td style="text-align:left">EMP（嵌入式处理）</td>
+<td style="text-align:left">$9.75亿</td>
+<td style="text-align:left"><strong>16.9%</strong></td>
+<td style="text-align:left">通用MCU同比+31.3%，连续5年全球#1</td>
+</tr>
+<tr>
+<td style="text-align:left">P&amp;D（功率与离散）</td>
+<td style="text-align:left">$3.89亿</td>
+<td style="text-align:left"><strong>-21.5%</strong></td>
+<td style="text-align:left">仍处亏损，SiC尚未扭亏</td>
+</tr>
+<tr>
+<td style="text-align:left">RF&amp;OC（射频/光通信）</td>
+<td style="text-align:left">$4.09亿</td>
+<td style="text-align:left"><strong>14.9%</strong></td>
+<td style="text-align:left">同比+33.9%，硅光平台放量</td>
+</tr>
+</tbody>
+</table>
+<h4 id="指引与前景">指引与前景 </h4>
+<ul>
+<li><strong>Q2 2026指引</strong>：营收$34.5亿（同比+24.9%，环比+11.6%），Non-GAAP毛利率35.2%</li>
+<li><strong>2026全年</strong>：营收双位数增长（double-digit growth）</li>
+<li>毛利率预计全年逐季改善，Q4将有"显著提升"</li>
+<li>全年OpEx：like-for-like同比中高个位数增长；含NXP收购和汇率影响，低双位数增长</li>
+<li><strong>LEO卫星业务</strong>：2026年5月4日将召开专题投资者电话会，目标2026-2028累计营收well above $30亿</li>
+<li>信用评级：S&amp;P BBB+（Negative Outlook），Moody Baa1（Stable Outlook）</li>
+</ul>
+<hr>
+<h3 id="23-安森美-onsemi--明确拐点ai数据中心汽车双轮驱动">2.3 安森美 onsemi — 明确拐点，AI数据中心+汽车双轮驱动 </h3>
+<h4 id="最新业绩q1-2026截至2026年4月4日">最新业绩（Q1 2026，截至2026年4月4日） </h4>
+<ul>
+<li><strong>营收$15.13亿</strong>，环比-1%，<strong>同比+5%</strong>，超指引中点
+<ul>
+<li>含约$5000万计划中的非核心业务退出</li>
+</ul>
+</li>
+<li><strong>毛利率38.5%</strong>（GAAP和Non-GAAP均同），<strong>连续三季度环比扩张</strong>（+32bps QoQ）</li>
+<li><strong>Non-GAAP运营利润率19.1%</strong></li>
+<li><strong>Non-GAAP EPS $0.64</strong></li>
+<li><strong>股票回购$3.46亿</strong>，约160%自由现金流返还股东</li>
+<li><strong>运营收入同比+10%</strong>，增速为营收增速的2倍，运营杠杆开始释放</li>
+<li><strong>LTM自由现金流利润率19.5%</strong></li>
+</ul>
+<h4 id="各终端市场">各终端市场 </h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">终端市场</th>
+<th style="text-align:left">Q1 2026</th>
+<th style="text-align:left">核心动态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>汽车</strong></td>
+<td style="text-align:left">$7.97亿 环比持平 <strong>同比+5%</strong></td>
+<td style="text-align:left">七季度来首次同比正增长；中国市场EV营收同比增长，乘用车市场下滑6%</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>工业</strong></td>
+<td style="text-align:left">$4.17亿 环比-6%</td>
+<td style="text-align:left">传统工业连续两季广泛走强，春节季节性影响</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>AI数据中心</strong></td>
+<td style="text-align:left">包含在"其他"$2.99亿中（环比+3.3%）</td>
+<td style="text-align:left"><strong>环比+30%+，同比翻倍</strong></td>
+</tr>
+</tbody>
+</table>
+<h4 id="ai数据中心--安森美增长最快业务">AI数据中心 — 安森美增长最快业务 </h4>
+<ul>
+<li><strong>Q1环比+30%+，几乎是进入季度时预期增速的两倍</strong></li>
+<li><strong>2026全年AI数据中心营收预计同比翻倍</strong></li>
+<li><strong>TAM</strong>：2029年AI数据中心可寻址市场**$122亿**，40% CAGR（2025-2029）</li>
+<li><strong>每机架半导体价值</strong>：当前54V低压架构约**<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>15</mn><mi>K</mi><mi mathvariant="normal">/</mi><mtext>机架</mtext><mo>∗</mo><mo>∗</mo><mtext>（</mtext><mn>600</mn><mi>k</mi><mi>W</mi><mo>−</mo><mn>1</mn><mi>M</mi><mi>W</mi><mtext>）；</mtext><mn>2030</mn><mtext>年</mtext><mn>800</mn><mi>V</mi><mtext>高压</mtext><mi>D</mi><mi>C</mi><mtext>架构约</mtext><mo>∗</mo><mo>∗</mo></mrow><annotation encoding="application/x-tex">15K/机架**（600kW-1MW）；2030年800V高压DC架构约**</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">15</span><span class="mord mathnormal" style="margin-right:0.0715em;">K</span><span class="mord">/</span><span class="mord cjk_fallback">机架</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.7778em;vertical-align:-0.0833em;"></span><span class="mord">∗</span><span class="mord cjk_fallback">（</span><span class="mord">600</span><span class="mord mathnormal" style="margin-right:0.0315em;">k</span><span class="mord mathnormal" style="margin-right:0.1389em;">W</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">1</span><span class="mord mathnormal" style="margin-right:0.109em;">M</span><span class="mord mathnormal" style="margin-right:0.1389em;">W</span><span class="mord cjk_fallback">）；</span><span class="mord">2030</span><span class="mord cjk_fallback">年</span><span class="mord">800</span><span class="mord mathnormal" style="margin-right:0.2222em;">V</span><span class="mord cjk_fallback">高压</span><span class="mord mathnormal" style="margin-right:0.0278em;">D</span><span class="mord mathnormal" style="margin-right:0.0715em;">C</span><span class="mord cjk_fallback">架构约</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.4653em;"></span><span class="mord">∗</span></span></span></span>115K/机架**，WBG（SiC/GaN）含量大幅提升</li>
+<li>覆盖PowerTree功率器件+控制器环节：从电网到VCore（0.8V-800V），多个XPU厂商、所有头部超大规模云厂商</li>
+<li>与NVIDIA合作推动向800V DC电源架构转型</li>
+<li>智能功率级(Smart Power Stages)已进入量产，5x5封装单SPS+双SPS开始送样</li>
+<li>FlexPower合作超30个活跃项目：中间总线转换器、电源、电池备份、超级电容、下一代800V DC架构</li>
+<li>作为"唯一广泛布局的美国功率半导体供应商"受益政策推动</li>
+</ul>
+<h4 id="sicgan与汽车电动化">SiC/GaN与汽车电动化 </h4>
+<ul>
+<li><strong>2026北京车展新车型SiC份额约55%</strong></li>
+<li>与吉利、蔚来扩展合作，赋能下一代900V平台（闪充+更长续航）</li>
+<li>中国EV市场由成本优化平台驱动，IGBT牵引逆变器采用增加；SiC仍在前轴等场景领先</li>
+<li>获得北美OEM IGBT牵引逆变器新设计赢单（该OEM转向直接半导体采购）</li>
+<li><strong>Treo平台</strong>：Q1收入环比增2.5倍+，应用从汽车区域架构、ADAS到AI数据中心、人形机器人</li>
+<li><strong>GaN</strong>：设计漏斗超$15亿，40-1200V产品组合，10款产品已送样，2026年再增20款送样</li>
+<li>与Innoscience、GlobalFoundries建立GaN代工合作，2027年开始产生收入</li>
+</ul>
+<h4 id="长期财务目标官方披露">长期财务目标（官方披露） </h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">指标</th>
+<th style="text-align:left">2025实际</th>
+<th style="text-align:left">长期目标</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">营收</td>
+<td style="text-align:left">$60亿</td>
+<td style="text-align:left">10-12% CAGR</td>
+</tr>
+<tr>
+<td style="text-align:left">毛利率</td>
+<td style="text-align:left">38.4%</td>
+<td style="text-align:left"><strong>53%</strong></td>
+</tr>
+<tr>
+<td style="text-align:left">运营利润率</td>
+<td style="text-align:left">18.6%</td>
+<td style="text-align:left"><strong>40%</strong></td>
+</tr>
+<tr>
+<td style="text-align:left">资本开支/营收</td>
+<td style="text-align:left">5.7%</td>
+<td style="text-align:left">中个位数%</td>
+</tr>
+<tr>
+<td style="text-align:left">自由现金流利润率</td>
+<td style="text-align:left">23.7%</td>
+<td style="text-align:left"><strong>25-30%</strong></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>增长驱动：AI数据中心、EV、工业自动化、能源基础设施、先进传感</li>
+<li><strong>$640亿TAM by 2029</strong>：AI数据中心<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>122</mn><mtext>亿</mtext><mo stretchy="false">(</mo><mn>40</mn></mrow><annotation encoding="application/x-tex">122亿(40% CAGR)、EV</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">122</span><span class="mord cjk_fallback">亿</span><span class="mopen">(</span><span class="mord">40</span></span></span></span>263亿(13% CAGR)、工厂自动化<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>113</mn><mtext>亿</mtext><mo stretchy="false">(</mo><mn>7</mn></mrow><annotation encoding="application/x-tex">113亿(7% CAGR)、能源基础设施</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">113</span><span class="mord cjk_fallback">亿</span><span class="mopen">(</span><span class="mord">7</span></span></span></span>96亿(19% CAGR)</li>
+</ul>
+<h4 id="产能与成本结构">产能与成本结构 </h4>
+<ul>
+<li>制造利用率从底部回升至约77%（CFO指引），Q2预计持平或略升</li>
+<li>预计全年毛利率持续环比扩张</li>
+<li><strong>Fab Right战略</strong>：优化制造网络提升成本效率，灵活利用外部产能</li>
+<li>2026年后无进一步非核心业务退出计划</li>
+<li><strong>股票回购授权$60亿</strong>，目标返还100%自由现金流</li>
+<li>Q2指引：营收$15.35-16.35亿，Non-GAAP毛利率38.0-40.0%，Non-GAAP EPS $0.65-0.77</li>
+</ul>
+<hr>
+<h2 id="三-ai数据中心功率半导体--三家对比">三、AI数据中心功率半导体 — 三家对比 </h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">维度</th>
+<th style="text-align:left">英飞凌 Infineon</th>
+<th style="text-align:left">意法半导体 STM</th>
+<th style="text-align:left">安森美 onsemi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>AI数据中心营收规模</strong></td>
+<td style="text-align:left">FY26: €15亿；FY27: €25亿（纯电源方案口径）</td>
+<td style="text-align:left">2026: &gt;$5亿；2027: &gt;$10亿（数据中心全品类口径，含MCU/RF/光通信）</td>
+<td style="text-align:left">2026全年预计翻倍（无FY2027具体数字指引）；TAM $122亿 by 2029</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>增速</strong></td>
+<td style="text-align:left">FY27较FY26 +67%（官方reconfirmed）</td>
+<td style="text-align:left">2027较2026 +100%+（数据中心总收入）</td>
+<td style="text-align:left">Q1环比+30%+，2026全年同比翻倍</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>产品覆盖</strong></td>
+<td style="text-align:left">功率半导体+控制器/驱动IC（不做电容/电感/散热）</td>
+<td style="text-align:left">Si+SiC+GaN+BCD+隔离技术（不做电容/电感/散热）</td>
+<td style="text-align:left">PowerTree功率器件+控制器（不做电容/电感/散热）</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>核心客户</strong></td>
+<td style="text-align:left">几乎所有AI生态头部企业</td>
+<td style="text-align:left">AWS（数十亿美元多年合作）、NVIDIA</td>
+<td style="text-align:left">NVIDIA、所有头部超大规模云厂商、多个XPU厂商</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>产能布局</strong></td>
+<td style="text-align:left">德累斯顿Smart Power Fab夏季启用；投资€27亿</td>
+<td style="text-align:left">意大利Agrate 300mm旗舰基地；200mm SiC扩产</td>
+<td style="text-align:left">East Fishkill Fab已投产；SiC JFET收购补强；GaN代工合作</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>技术差异化</strong></td>
+<td style="text-align:left">系统级理解+全面产品组合+制造卓越</td>
+<td style="text-align:left">与NVIDIA 800V DC合作；SiC/GaN/硅基全能；硅光平台大批量生产</td>
+<td style="text-align:left">Treo平台（模拟+功率+传感融合）；垂直GaN（700V/1200V送样，2026末量产）；SiC JFET Cascode；每机架<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>15</mn><mi>K</mi><mo>→</mo></mrow><annotation encoding="application/x-tex">15K→</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">15</span><span class="mord mathnormal" style="margin-right:0.0715em;">K</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span></span></span></span>115K</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>竞争定位</strong></td>
+<td style="text-align:left">全球功率半导体#1，AI电源领导者</td>
+<td style="text-align:left">从周期底部追赶，AI为新增长极</td>
+<td style="text-align:left">美国唯一广泛布局功率半导体供应商，政策受益</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>口径说明</strong>：三家公司AI数据中心收入统计口径不同，不可直接横向比较绝对数值。</p>
+<ul>
+<li>英飞凌为<strong>纯AI电源方案</strong>（SiC+GaN+模拟/驱动），口径最窄；</li>
+<li>意法为<strong>数据中心全品类</strong>（~40%模拟/功率 + ~60% MCU/RF/光通信），口径最宽；</li>
+<li>安森美未披露AI数据中心收入的历史基数，仅确认2026全年同比翻倍，无FY2027具体数字指引。</li>
+</ul>
+</blockquote>
+<hr>
+<h2 id="四-sic业务专项跟踪">四、SiC业务专项跟踪 </h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">公司</th>
+<th style="text-align:left">SiC最新进展</th>
+<th style="text-align:left">产能布局</th>
+<th style="text-align:left">目标</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>英飞凌</strong></td>
+<td style="text-align:left">FY25 SiC营收€6.5亿（+30%+）；FY26低双位数增长；CoolSiC MOSFET G2导通损耗降15%；8英寸SiC首批产品2025Q1发布</td>
+<td style="text-align:left">奥地利菲拉赫200mm；马来西亚居林Module 3即将量产；"One Virtual Fab"虚拟工厂战略打通两地</td>
+<td style="text-align:left">2026年提升SiC模块在新能源车主驱渗透率</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>意法半导体</strong></td>
+<td style="text-align:left">与NVIDIA合作800V DC架构；功率与离散产品Q1同比-1.8%（仍弱）</td>
+<td style="text-align:left">意大利卡塔尼亚200mm SiC园区2025Q4投产；Agrate 300mm转向SiC/RF；法国Crolles 200mm产线转向SiC</td>
+<td style="text-align:left">2027年SiC收入&gt;$10亿，营收占比15%</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>安森美</strong></td>
+<td style="text-align:left">EliteSiC M3E（1200V）已用于小米YU7；M3e模块杂散电感&lt;4nH，内阻1.4mΩ；收购Qorvo SiC JFET资产；北京车展新车型SiC份额~55%</td>
+<td style="text-align:left">衬底到器件全链IDM；East Fishkill Fab；捷克共和国下一代SiC制造设施（获欧盟$5.3亿国家援助）</td>
+<td style="text-align:left">与头部车企签LTSA长单；2025年SiC营收占比目标12-15%</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="五-值得重点关注的事项">五、值得重点关注的事项 </h2>
+<h3 id="51-正面催化bull-case">5.1 正面催化（Bull Case） </h3>
+<ol>
+<li>
+<p><strong>AI数据中心功率需求爆发式增长</strong></p>
+<ul>
+<li>英飞凌AI电源业务"当前处于Allocation（产能分配）状态"，供不应求</li>
+<li>三家均将AI数据中心定位为最优先增长引擎；英飞凌FY27指引+67%，意法数据中心总收入+100%+，安森美2026全年同比翻倍</li>
+<li>从"算力芯片本体"外溢到"电力与信号链条"的传导正在加速</li>
+</ul>
+</li>
+<li>
+<p><strong>汽车电动化长期趋势未改，短期分化</strong></p>
+<ul>
+<li>安森美：中国汽车营收同比增长，尽管乘用车市场下滑6%；北京车展SiC份额55%</li>
+<li>900V/800V高压平台成为新趋势，SiC内容量持续提升</li>
+<li>英飞凌汽车MCU市场份额从32%→36%，持续扩大领先</li>
+</ul>
+</li>
+<li>
+<p><strong>周期触底信号明确</strong></p>
+<ul>
+<li>意法半导体：Book-to-Bill全市场&gt;1，库存天数从167天降至140天，分销库存正常化</li>
+<li>安森美：明确声明"已越过周期底部"，汽车七季度来首次同比正增长</li>
+<li>英飞凌：订单积压同比+25%，更广泛的上升周期在望</li>
+</ul>
+</li>
+<li>
+<p><strong>GaN成为新战场</strong></p>
+<ul>
+<li>英飞凌：GaN在AI数据中心快速放量，300mm GaN工艺进入量产准备</li>
+<li>安森美：垂直GaN(vGaN)设定新标杆，设计漏斗&gt;$15亿，与Innoscience/GF代工合作</li>
+<li>意法半导体：与英诺赛科8英寸GaN合作，法国图尔8英寸产线</li>
+</ul>
+</li>
+</ol>
+<h3 id="52-风险与警示bear-case--关注点">5.2 风险与警示（Bear Case / 关注点） </h3>
+<ol>
+<li>
+<p><strong>英飞凌汽车高压业务利润率危机</strong></p>
+<ul>
+<li>CEO Hanebeck明确表示汽车高压电驱（IGBT/SiC模块）"利润率不可接受"</li>
+<li><strong>结构性原因</strong>：EV渗透率低于预期+过去几年SiC产能大幅扩张，导致汽车e-powertrain功率模块供需错配，价格和销量双降</li>
+<li>正在进行业务重组，Warstein后端产线调整，前端产能转向AI数据中心</li>
+<li><strong>关注点</strong>：重组成本对FY26利润的拖累幅度；汽车高压SiC与AI数据中心SiC的价格走势分化</li>
+</ul>
+</li>
+<li>
+<p><strong>意法半导体盈利能力仍脆弱</strong></p>
+<ul>
+<li>尽管营收同比+23%，Non-GAAP运营利润率仅5.5%，Non-GAAP EPS仅$0.13</li>
+<li>功率与离散产品（含SiC）运营利润率仍为负21.5%</li>
+<li>制造重塑产生持续费用（Q1 $7100万重组/减值），预计全年类似水平</li>
+<li><strong>关注点</strong>：毛利率能否如指引逐季改善至Q4的"显著提升"；SiC业务何时贡献正向利润</li>
+</ul>
+</li>
+<li>
+<p><strong>安森美营收恢复节奏</strong></p>
+<ul>
+<li>Q1同比+5%虽为拐点，但绝对营收<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>15.13</mn><mtext>亿仍远低于</mtext><mn>2024</mn><mtext>年</mtext><mi>Q</mi><mn>1</mn><mtext>的</mtext></mrow><annotation encoding="application/x-tex">15.13亿仍远低于2024年Q1的</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord">15.13</span><span class="mord cjk_fallback">亿仍远低于</span><span class="mord">2024</span><span class="mord cjk_fallback">年</span><span class="mord mathnormal">Q</span><span class="mord">1</span><span class="mord cjk_fallback">的</span></span></span></span>18.63亿</li>
+<li>工业市场环比-6%，传统工业复苏力度尚不确定</li>
+<li><strong>关注点</strong>：Q2及H2营收增速能否持续加速；利用率提升对毛利率的传导效率</li>
+</ul>
+</li>
+<li>
+<p><strong>地缘政治与关税风险</strong></p>
+<ul>
+<li>英飞凌：直接关税影响有限，但汇率逆风显著（EUR/USD假设从1.15调至1.17）</li>
+<li>意法半导体：明确指引未计入潜在贸易关税变化；欧盟《芯片法案》本地化要求可能推高成本</li>
+<li>安森美：多元化制造布局（美国、欧洲、亚洲）是竞争优势，但需跟踪政策变化</li>
+</ul>
+</li>
+<li>
+<p><strong>SiC结构性供需分化</strong></p>
+<ul>
+<li><strong>汽车e-powertrain SiC</strong>：EV渗透率低于预期+产能大幅扩张，导致价格与销量双降（英飞凌称"利润率不可接受"，安森美SiC ASP同比-10%）——这是<strong>结构性供需错配</strong>，非简单周期性去库存</li>
+<li><strong>AI数据中心SiC/GaN</strong>：算力需求爆发，单机架功耗从30kW向100kW+迈进，英飞凌确认"allocation（供不应求）"，部分产品价格上涨</li>
+<li>英飞凌、意法、安森美、Wolfspeed、Rohm等均在大幅扩产8英寸SiC，但新增产能主要面向AI数据中心和工业，汽车高压SiC仍在消化过剩</li>
+<li><strong>关注点</strong>：AI数据中心能否足够快地吸收新增SiC产能；新能源汽车SiC渗透率提升速度</li>
+</ul>
+</li>
+<li>
+<p><strong>竞争格局变化</strong></p>
+<ul>
+<li>英飞凌在功率半导体市场份额领先，但安森美在美国AI数据中心市场有"本土供应商"优势</li>
+<li>中国厂商（如士兰微、斯达半导、比亚迪半导体）在SiC领域快速追赶</li>
+<li>英飞凌与意法在重庆的合资工厂（2025Q3量产）反映"欧洲设计+中国制造"的联盟策略</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="附录业绩会qa关键纪要">附录：业绩会Q&amp;A关键纪要 </h2>
+<blockquote>
+<p>以下整理自三家最新业绩会的分析师问答环节（Q&amp;A），提取对投资判断有实质影响的管理层回应。</p>
+</blockquote>
+<h3 id="英飞凌-infineon--fy2026-q22026年5月6日">英飞凌 Infineon — FY2026 Q2（2026年5月6日） </h3>
+<p><strong>关于汽车高压电驱业务重组</strong></p>
+<ul>
+<li><strong>高压业务仅占汽车营收约7%</strong>，不影响MCU、模拟、传感器、MOSFET等其他产品</li>
+<li>CEO Hanebeck明确表示：<strong>"不会以任何代价追逐市场份额，专注于盈利增长"</strong></li>
+<li>重组包括：Warstein后端产线调整+精简产品组合+前端产能转向AI数据中心</li>
+<li><strong>影响范围有限</strong>：高压电驱业务困境"exclusively to high-voltage power semiconductors"</li>
+</ul>
+<p><strong>关于汽车内容增长</strong></p>
+<ul>
+<li>BMW iX3（Neue Klasse平台）使用英飞凌多种器件：AURIX MCU、TRAVEO、BRIGHTLANE连接、PMIC、智能功率开关、eFuse</li>
+<li><strong>与吉利的设计赢单</strong>：大量MCU和模拟半导体用于BMS和中央控制单元</li>
+<li>SDV与电动化趋势"actually intertwined"，结构性半导体增长比实际车辆销量更重要</li>
+</ul>
+<p><strong>关于FY26展望上调细节</strong></p>
+<ul>
+<li>营收：<strong>超过€160亿</strong>（此前约€160亿）</li>
+<li>ATV排除高压业务和Marvell以太网业务后，FY26将增长<strong>近9%</strong></li>
+<li>PSS增长将<strong>显著快于集团平均</strong></li>
+<li>部门利润率：从"high-teens"上调至**~20%**</li>
+<li>自由现金流：报告口径<sub>€12.5亿，调整后</sub>€16.5亿</li>
+<li>德累斯顿Smart Power Fab <strong>7月2日正式启用</strong></li>
+</ul>
+<p><strong>关于AI数据中心</strong></p>
+<ul>
+<li>AI相关产能<strong>供不应求（allocation）</strong></li>
+<li><strong>GaN方案已在AI数据中心快速放量</strong>，客户采用覆盖多级电源转换</li>
+<li>SiC在AI相关应用中需求"very strong"，当前财年实现低双位数增长</li>
+<li>每千瓦半导体价值<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>100</mn><mo>−</mo><mn>250</mn><mtext>，平均</mtext></mrow><annotation encoding="application/x-tex">100-250，平均</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">100</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">250</span><span class="mord cjk_fallback">，平均</span></span></span></span>175；2030年可寻址市场€80-120亿</li>
+</ul>
+<hr>
+<h3 id="意法半导体-stm--q1-20262026年4月23日">意法半导体 STM — Q1 2026（2026年4月23日） </h3>
+<p><strong>关于AI数据中心需求</strong></p>
+<ul>
+<li>CEO Chery：AI数据中心<strong>需求不受约束（unconstrained demand）</strong></li>
+<li>2026和2027年营收目标分别确认"nicely above <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>500</mn><mi>M</mi><mi mathvariant="normal">"</mi><mtext>和</mtext><mi mathvariant="normal">"</mi><mi>w</mi><mi>e</mi><mi>l</mi><mi>l</mi><mi>a</mi><mi>b</mi><mi>o</mi><mi>v</mi><mi>e</mi></mrow><annotation encoding="application/x-tex">500M"和"well above</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord">500</span><span class="mord mathnormal" style="margin-right:0.109em;">M</span><span class="mord">"</span><span class="mord cjk_fallback">和</span><span class="mord">"</span><span class="mord mathnormal" style="margin-right:0.0269em;">w</span><span class="mord mathnormal">e</span><span class="mord mathnormal" style="margin-right:0.0197em;">l</span><span class="mord mathnormal" style="margin-right:0.0197em;">l</span><span class="mord mathnormal">ab</span><span class="mord mathnormal">o</span><span class="mord mathnormal" style="margin-right:0.0359em;">v</span><span class="mord mathnormal">e</span></span></span></span>1B"</li>
+<li><strong>2026年将有"重大突破"（significant breakthrough）</strong></li>
+<li>2026年下半年将<strong>增加产能</strong>，目标是尽可能满足客户不受约束的需求</li>
+<li>当前处于<strong>产能爬坡模式（ramp-up mode）</strong>，特别是光子和相关技术</li>
+</ul>
+<p><strong>关于毛利率改善路径</strong></p>
+<ul>
+<li>CFO Grandi确认：毛利率将从Q2的35.2%<strong>逐季改善</strong></li>
+<li>驱动因素：收入增长带来的规模效应、闲置产能费用持续下降、产品组合改善</li>
+<li><strong>关键里程碑</strong>：季度营收达到€40亿以上时，毛利率将达到<strong>40%</strong></li>
+<li>制造重塑计划完成后，毛利率将进一步提升</li>
+</ul>
+<p><strong>关于2026全年指引</strong></p>
+<ul>
+<li>营收<strong>双位数增长</strong></li>
+<li>H2 vs H1符合正常季节性</li>
+<li><strong>产能预留费（capacity reservation fees）将减少$1.4亿</strong>（对收入的小幅负面）</li>
+<li>积压订单（backlog）已充分装载（well loaded）</li>
+<li>主要增长贡献：ADAS、SiC、传感器、通用MCU、AI基础设施、LEO卫星</li>
+</ul>
+<p><strong>关于AWS合作</strong></p>
+<ul>
+<li><strong>多年期、数十亿美元（multi-year, multi-billion USD）</strong></li>
+<li>覆盖广泛半导体解决方案，利用意法专有技术组合</li>
+<li>赋能云和AI高性能计算基础设施</li>
+</ul>
+<hr>
+<h3 id="安森美-onsemi--q1-20262026年5月4日">安森美 onsemi — Q1 2026（2026年5月4日） </h3>
+<p><strong>关于AI数据中心长期机会</strong></p>
+<ul>
+<li>CEO El-Khoury详细拆解<strong>从电网到机架的功率半导体机会</strong>（覆盖功率器件+控制器环节，不覆盖电容/电感/散热）：
+<ul>
+<li>当前120kW机架：约**$9,500**半导体内容</li>
+<li>800V高压机架：约**$115,000**半导体内容（<strong>约10x增长</strong>）</li>
+<li>从机架到基础设施（固态变压器SST等）还有<strong>额外增量内容</strong></li>
+<li>所有高压领域都是安森美的"sweet spot"</li>
+</ul>
+</li>
+<li><strong>2025年AI数据中心营收约<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2.5</mn><mtext>亿，</mtext><mn>2026</mn><mtext>年预计翻倍至约</mtext></mrow><annotation encoding="application/x-tex">2.5亿，2026年预计翻倍至约</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">2.5</span><span class="mord cjk_fallback">亿，</span><span class="mord">2026</span><span class="mord cjk_fallback">年预计翻倍至约</span></span></span></span>5亿</strong></li>
+</ul>
+<p><strong>关于汽车恢复：内容增长 vs 需求正常化</strong></p>
+<ul>
+<li>中国乘用车市场下滑6%，但安森美中国汽车营收<strong>同比增长</strong></li>
+<li><strong>内容增长强于销量增长（SAR）</strong></li>
+<li>10BASE-T1S以太网是软件定义车辆的<strong>净新增内容</strong></li>
+<li>区域健康度：中国最强，其次是北美，然后是欧洲</li>
+</ul>
+<p><strong>关于Treo平台</strong></p>
+<ul>
+<li>Q1收入<strong>环比增2.5倍+</strong></li>
+<li>已开始为北美领先客户生产发货10BASE-T1S以太网方案（集成30+ Treo器件）</li>
+<li>设计赢单覆盖：区域架构、ADAS、AI客户端电源管理、人形机器人感应位置传感</li>
+</ul>
+<p><strong>关于Q2非核心业务退出</strong></p>
+<ul>
+<li>Q2将有额外**$3000-4000万**非核心业务退出</li>
+<li>退出后，Q2营收预计环比增长约<strong>7%</strong>，高于季节性</li>
+</ul>
+<p><strong>关于运营杠杆</strong></p>
+<ul>
+<li>利用率Q1快速提升至**77%**以支持强劲需求信号</li>
+<li>Q2预计持平或略升</li>
+<li>全年毛利率预计<strong>持续环比扩张</strong></li>
+</ul>
+<hr>
+<h2 id="六-投资观点总结">六、投资观点总结 </h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">公司</th>
+<th style="text-align:left">核心投资逻辑</th>
+<th style="text-align:left">关键跟踪指标</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>英飞凌</strong></td>
+<td style="text-align:left">全球功率半导体绝对龙头，AI数据中心电源业务供不应求，FY26-FY27指引明确；组织重构提升效率；汽车高压业务重组后轻装上阵</td>
+<td style="text-align:left">AI电源营收爬坡、德累斯顿Fab良率/产能、汽车高压业务重组进度、订单积压变化</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>意法半导体</strong></td>
+<td style="text-align:left">周期触底反弹最明确标的，同比+23%验证需求恢复；AI数据中心从零到一（AWS数十亿美元合作）；制造重塑降本空间$3-4亿/年</td>
+<td style="text-align:left">毛利率逐季改善幅度、数据中心营收兑现、功率离散业务扭亏时间、库存去化</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>安森美</strong></td>
+<td style="text-align:left">明确周期拐点，运营杠杆开始释放（运营收入增速2x营收增速）；AI数据中心环比+30%+；美国功率半导体政策受益者；Treo+GaN新平台放量；长期目标毛利率53%/运营利润率40%</td>
+<td style="text-align:left">毛利率持续扩张、AI营收全年翻倍兑现、汽车同比持续增长、Treo收入爬坡、利用率提升对毛利率传导、vGaN量产进度</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="七-材料清单">七、材料清单 </h2>
+<p>本报告参考的原始材料已下载至以下路径：</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>C:/Users/zyfan/SiC_Research/
+├── Infineon/
+│   ├── Infineon_Q4_FY2025_Investor_Presentation.pdf
+│   ├── Infineon_Q2_FY2026_Analyst_Call.pdf              ← 官方演示文稿 FY26Q2 (至2026/3/31)
+│   └── Infineon_Q2_FY2026_Earnings_Call_Transcript.txt  ← 电话会纪要（CEO演讲完整，Q&amp;A部分因来源限制有截断）
+├── STMicroelectronics/
+│   ├── STM_Q2_2025_Financial_Results.pdf                ← 旧财报（非本次研究重点）
+│   ├── ST_Q126_Earnings_Presentation_FinalV2.pdf        ← 官方演示文稿 Q1 2026 (至2026/3/28)
+│   └── STM_Q1_2026_Earnings_Call_Transcript.txt         ← 电话会纪要（完整）
+└── ON_Semiconductor/
+    ├── Q1 2026 Quarterly Investor Presentation - Final.pdf ← 官方演示文稿 Q1 2026 (至2026/4/4)
+    └── ON_Q1_2026_Earnings_Call_Transcript.txt           ← 电话会纪要（完整）
+</code></pre><p><strong>推荐阅读原始材料</strong>：</p>
+<ol>
+<li>英飞凌FY2026 Q2业绩会实录（<a href="http://roic.ai">roic.ai</a> / <a href="http://investing.com">investing.com</a>）— CEO演讲完整，Q&amp;A部分因Cloudflare保护有截断</li>
+<li>意法半导体Q1 2026业绩会实录（<a href="http://marketbeat.com">marketbeat.com</a> / <a href="http://benzinga.com">benzinga.com</a>）— 完整</li>
+<li>安森美Q1 2026业绩会实录（<a href="http://marketbeat.com">marketbeat.com</a> / <a href="http://seekingalpha.com">seekingalpha.com</a>）— 完整</li>
+<li>巴克莱第23届全球科技年会三家SiC/GaN专题发言（2025年12月）</li>
+</ol>
+<hr>
+<p><em>免责声明：本报告基于公开信息整理，仅供研究参考，不构成投资建议。</em></p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
